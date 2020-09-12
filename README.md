@@ -80,6 +80,8 @@ These are some images after they preprocessed, before fed into the model for cla
 
 !["Image 1"](/README/Picture3.png)
 
+## img 2
+
 !["Image 2"](/README/Picture4.png)
 
 These are the SoftMax probabilities and predictions that are obtained for these 2 specific images: 
@@ -87,15 +89,19 @@ These are the SoftMax probabilities and predictions that are obtained for these 
 Probabilities: 
 
 (k=5) 
-Top 5 softmax probabilities of imag1 are:  [9.744509e-01 1.789298e-02 5.325369e-03 1.5164 02e-03 5.202094e-04] 
-Top 5 softmax probabilities of imag1 are:  [9.9999523e-01 4.7153135e-06 1.4311459e-08 6.8975176e-10 1.9309242e-10] 
+
+Top 5 softmax probabilities of imag1 are:  [9.744509e-01 1.789298e-02 5.325369e-03 1.5164 02e-03 5.202094e-04]
+
+Top 5 softmax probabilities of imag1 are:  [9.9999523e-01 4.7153135e-06 1.4311459e-08 6.8975176e-10 1.9309242e-10]
  
  
 Predicted Classes: 
 
-(k=5) 
-Top 5 softmax predictions of imag2 are:  [34 38 40 12 35]  
-Top 5 softmax predictions of imag2 are:  [1 2 5 7 4] 
+(k=5)
+
+Top 5 softmax predictions of imag2 are:  [34 38 40 12 35] 
+
+Top 5 softmax predictions of imag2 are:  [1 2 5 7 4]
  
 ## 7.	Test a Model on New Images 
 The images that are used in training are 3 channel,32*32 sized images. (model input shape is 32,32,1) While the test images that has taken from the internet has higher resolution and detailed than the trained images (1300*960*3 etc.). So, when these images are fed into the model, there are resolution errors. So, after we do gray scaling and histogram equalization, the resize and reshape the new images to the original input size of the model is must. (which is (32,32,1) Because of our new test images are high resolution, when it’s shrunk to (32,32,1), there are no significant detail loss. But again, the input size doesn’t matter if we trained using Fully Convoluted Neural Network. (Because of no dense layers except the output) 
